@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysioWalk – פיזיותרפיה מתקדמת לתנועה טובה יותר</title>
+    <!-- טעינת Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- הגדרות קונפיגורציה של Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#10567A', // כחול עמוק, מקצועי
+                        'secondary-green': '#32A852', // ירוק מרענן, בריאותי
+                        'light-bg': '#F7F9FB', // רקע בהיר
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* הגדרת גופן אינטר כברירת מחדל */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* אפקטי ריחוף עדינים לכפתורים */
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(16, 86, 122, 0.4);
+        }
+        /* קו תחתון עדין לכותרות סעיפים */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #32A852;
+            margin-top: 8px;
+            border-radius: 2px;
+            margin-right: 0; /* לביטול מרכוז ב-RTL */
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- 1. כותרת עליונה (Hero Section) -->
+    <header class="bg-light-bg py-16 md:py-24 shadow-lg">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-primary-blue mb-4 leading-tight">
+                PhysioWalk – פיזיותרפיה מתקדמת לתנועה טובה יותר
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                טיפול אישי ומקצועי בכאבים, שיקום וחזרה לתפקוד מלא
+            </p>
+            <!-- כפתור קריאה לפעולה (CTA) -->
+            <a href="#contact" class="cta-button inline-block bg-secondary-green text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-emerald-600 focus:outline-none focus:ring-4 focus:ring-secondary-green focus:ring-opacity-50">
+                לתיאום טיפול – לחצו כאן
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. אודות הקליניקה (About Section) -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-primary-blue mb-10">אודות PhysioWalk</h2>
+            <div class="bg-light-bg p-8 md:p-12 rounded-2xl shadow-inner border-r-4 border-secondary-green">
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                    PhysioWalk היא קליניקה מובילה לפיזיותרפיה, המשלבת ניסיון רב שנים, גישה אישית והקשבה מלאה לצרכי המטופל.
+                    אנו מתמחים בשיקום מקיף ובטיפול מתקדם במגוון רחב של בעיות אורתופדיות ונוירולוגיות.
+                    בקליניקה נעשה שימוש בציוד טכנולוגי חדשני ובשיטות הטיפול העדכניות ביותר, כדי להבטיח לך חזרה מהירה ובטוחה לתנועה, לכוח ולתפקוד מלא, תוך בניית תוכנית טיפול מדויקת ומותאמת אישית.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. תחומי טיפול (Treatments Section) -->
+    <section id="treatments" class="py-16 md:py-24 bg-light-bg">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-primary-blue mb-12">תחומי הטיפול שלנו</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- כרטיס טיפול: פיזיותרפיה אורטופדית -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-secondary-green">
+                    <span class="text-4xl mb-4 block">🦴</span>
+                    <h3 class="text-xl font-semibold text-primary-blue mb-2">פיזיותרפיה אורטופדית</h3>
+                    <p class="text-gray-600">טיפול בכאבי מפרקים, פציעות ספורט ושיקום רקמות רכות.</p>
+                </div>
+
+                <!-- כרטיס טיפול: כאבי גב וצוואר -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-secondary-green">
+                    <span class="text-4xl mb-4 block">🧘</span>
+                    <h3 class="text-xl font-semibold text-primary-blue mb-2">כאבי גב וצוואר</h3>
+                    <p class="text-gray-600">אבחון וטיפול בפריצות דיסק, הקרנות ושיפור יציבה.</p>
+                </div>
+                
+                <!-- כרטיס טיפול: שיקום לאחר ניתוחים ופציעות -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-secondary-green">
+                    <span class="text-4xl mb-4 block">🩹</span>
+                    <h3 class="text-xl font-semibold text-primary-blue mb-2">שיקום לאחר ניתוחים ופציעות</h3>
+                    <p class="text-gray-600">חזרה הדרגתית ובטוחה לתפקוד מלא לאחר טראומה או ניתוח.</p>
+                </div>
+                
+                <!-- כרטיס טיפול: שיווי משקל ומניעת נפילות -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-secondary-green">
+                    <span class="text-4xl mb-4 block">🤸</span>
+                    <h3 class="text-xl font-semibold text-primary-blue mb-2">שיווי משקל ומניעת נפילות</h3>
+                    <p class="text-gray-600">אימוני יציבות ייעודיים לשיפור הביטחון בתנועה.</p>
+                </div>
+                
+                <!-- כרטיס טיפול: טיפול וסטיבולרי (סחרחורות) -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-secondary-green">
+                    <span class="text-4xl mb-4 block">👂</span>
+                    <h3 class="text-xl font-semibold text-primary-blue mb-2">טיפול וסטיבולרי (סחרחורות)</h3>
+                    <p class="text-gray-600">טיפול מקצועי בסחרחורות (ורטיגו) והפרעות שיווי משקל.</p>
+                </div>
+                
+                <!-- כרטיס טיפול: טיפול בגלי הלם -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-secondary-green">
+                    <span class="text-4xl mb-4 block">⚡</span>
+                    <h3 class="text-xl font-semibold text-primary-blue mb-2">טיפול בגלי הלם</h3>
+                    <p class="text-gray-600">פתרון יעיל לכאבים כרוניים, דורבן וגידים דלקתיים.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. למה לבחור בנו (Why Choose Us) -->
+    <section id="why-us" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-primary-blue mb-12">למה לבחור ב-PhysioWalk?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 text-center">
+                
+                <!-- יתרון 1: יחס אישי -->
+                <div class="flex flex-col items-center p-6 bg-light-bg rounded-xl shadow-md">
+                    <span class="text-5xl text-secondary-green mb-3">🤝</span>
+                    <h3 class="text-xl font-semibold text-gray-700">יחס אישי</h3>
+                    <p class="text-gray-500">הקשבה מלאה ובניית תוכנית טיפול פרטנית.</p>
+                </div>
+                
+                <!-- יתרון 2: מטפלים מוסמכים -->
+                <div class="flex flex-col items-center p-6 bg-light-bg rounded-xl shadow-md">
+                    <span class="text-5xl text-secondary-green mb-3">🎓</span>
+                    <h3 class="text-xl font-semibold text-gray-700">מטפלים מוסמכים</h3>
+                    <p class="text-gray-500">צוות פיזיותרפיסטים בעלי הכשרה וניסיון מוכח.</p>
+                </div>
+                
+                <!-- יתרון 3: ציוד מתקדם -->
+                <div class="flex flex-col items-center p-6 bg-light-bg rounded-xl shadow-md">
+                    <span class="text-5xl text-secondary-green mb-3">⚙️</span>
+                    <h3 class="text-xl font-semibold text-gray-700">ציוד מתקדם</h3>
+                    <p class="text-gray-500">שימוש בטכנולוגיות חדשניות להשגת תוצאות מיטביות.</p>
+                </div>
+                
+                <!-- יתרון 4: קליניקה מקצועית ונעימה -->
+                <div class="flex flex-col items-center p-6 bg-light-bg rounded-xl shadow-md">
+                    <span class="text-5xl text-secondary-green mb-3">✨</span>
+                    <h3 class="text-xl font-semibold text-gray-700">קליניקה מקצועית ונעימה</h3>
+                    <p class="text-gray-500">סביבה תומכת ורגועה המסייעת לתהליך הריפוי.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. יצירת קשר (Contact Section) -->
+    <section id="contact" class="py-16 md:py-24 bg-primary-blue text-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10">ליצירת קשר וקביעת תור</h2>
+            
+            <div class="bg-white text-primary-blue p-8 rounded-2xl shadow-2xl space-y-6">
+                
+                <!-- טלפון מעודכן -->
+                <div class="text-2xl font-semibold">
+                    📞 <a href="tel:0559464294" class="hover:underline">טלפון: 055-9464294</a>
+                </div>
+
+                <!-- כפתור WhatsApp מעודכן -->
+                <a href="https://wa.me/972559464294?text=שלום+PhysioWalk,+אשמח+לקבוע+תור+לטיפול+פיזיותרפיה." target="_blank" class="inline-flex items-center justify-center w-full sm:w-auto bg-secondary-green text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-emerald-600 transition duration-300">
+                    <!-- אייקון WhatsApp (SVG פשוט) -->
+                    <svg class="w-6 h-6 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 3.318 1.44 6.31 3.738 8.358l-.94 2.82c-.08.24.18.49.42.41l2.82-.94c2.048 2.298 5.04 3.738 8.358 3.738 5.523 0 10-4.477 10-10S17.523 2 12 2zm3.733 13.918c-.105.27-.61.503-.83.535-.22.032-.47-.024-.728-.168-.258-.144-.64-.265-1.222-.544-.582-.279-1.222-.64-1.936-1.127-.714-.487-1.31-1.092-1.748-1.602-.438-.51-.68-1.124-.91-1.87-.23-.746-.118-1.42.062-1.62.18-.2.43-.3.66-.3.23 0 .44.02.62.43.18.41.6.994.664 1.12.064.126.105.215.158.318.053.103.078.225.078.36.002.135-.045.242-.11.365-.065.123-.195.272-.34.423-.145.15-.31.332-.43.498-.12.166-.21.32-.09.52.12.2.378.68.795 1.05.417.37.91.567 1.25.66.34.093.55.126.79.08.24-.046.72-.27 1.02-.545.3-.275.52-.58.625-.76.105-.18.22-.38.385-.45.165-.07.35-.05.5.02.15.07.31.25.43.43.12.18.24.37.33.51.09.14.16.27.2.36.04.09.13.29.02.43z"/>
+                    </svg>
+                    שליחת הודעת WhatsApp
+                </a>
+                
+                <!-- כתובת מעודכנת ופתק -->
+                <div class="text-lg text-gray-700 pt-4 border-t border-gray-200">
+                    <p class="font-semibold mb-1">📍 מיקום הקליניקה:</p>
+                    <p class="mb-4">דרך עכו 271 קריית מוצקין. מרכז מסחרי נווה גנים קומה 2</p>
+                    <p class="text-sm font-light text-red-600 italic">
+                        *האתר המלא נמצא בעדכון זמני, נשמח לעמוד לשירותך בטלפון או בווטסאפ.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- פוטר (Footer) -->
+    <footer class="bg-gray-800 text-white text-center py-4 text-sm">
+        <p>&copy; 2024 PhysioWalk. כל הזכויות שמורות.</p>
+    </footer>
+
+</body>
+</html>
