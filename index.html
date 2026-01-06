@@ -192,7 +192,41 @@
                     </svg>
                     שליחת הודעת WhatsApp
                 </a>
-                
+                <!-- טופס יצירת קשר -->
+<form action="https://formspree.io/f/mojvobnr" method="POST"
+      class="mt-6 space-y-4 bg-gray-50 p-6 rounded-xl">
+
+  <div>
+    <label class="block font-semibold mb-1">שם מלא</label>
+    <input type="text" name="name" required
+           class="w-full p-3 rounded-lg border border-gray-300">
+  </div>
+
+  <div>
+    <label class="block font-semibold mb-1">טלפון</label>
+    <input type="tel" name="phone" required
+           class="w-full p-3 rounded-lg border border-gray-300">
+  </div>
+
+  <div>
+    <label class="block font-semibold mb-1">אימייל</label>
+    <input type="email" name="email"
+           class="w-full p-3 rounded-lg border border-gray-300">
+  </div>
+
+  <div>
+    <label class="block font-semibold mb-1">הודעה</label>
+    <textarea name="message" rows="4"
+              class="w-full p-3 rounded-lg border border-gray-300"></textarea>
+  </div>
+
+  <button type="submit"
+          class="w-full bg-primary-blue text-white py-3 rounded-xl font-bold hover:opacity-90">
+    שליחת פנייה
+  </button>
+
+</form>
+
                 <!-- כתובת מעודכנת ופתק -->
                 <div class="text-lg text-gray-700 pt-4 border-t border-gray-200">
                     <p class="font-semibold mb-1">📍 מיקום הקליניקה:</p>
@@ -213,3 +247,4 @@
 
 </body>
 </html>
+
